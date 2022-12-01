@@ -1,0 +1,58 @@
+{% extends 'student/studentbase.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+</head>
+<br><br>
+<div class="container my-4">
+    <div class="jumbotron">
+
+	      <h3 class="text-info text-center">Imtihonni boshlashdan oldin, bu erda qoidalar mavjud</h3>
+
+        <div class="row">
+
+            <div class="card border-info mx-4 my-4">
+                <div class="card-body text-info">
+
+                    <h4 class="card-title">Imtihon tafsilotlari:</h4>
+                    <p class="card-text">
+                        </p><ul style="list-style:decimal;">
+                            <li>Imtihon nomi {{course.course_name}}</li>
+                            <li>Jami savollar : {{total_questions}}</li>
+                            <li>Jami ballar : {{total_marks}}</li>
+                        </ul>
+                    <p></p>
+
+
+
+                    <h4 class="card-title">Qoidalar :</h4>
+                    <p class="card-text">
+                        </p><ul style="list-style:decimal;">
+                            <li>Barcha savollar ko'p tanlovli savollardir.</li>
+                            <li><span class="text-danger">Faqat bitta tanlov to'g'ri.</span></li>
+                            <li>Har bir savol turli belgilarga ega
+                            </li>
+                
+                            <li>Iloji boricha tezroq javob berishga harakat qiling.</li>
+                            <li>Agar yangilashni bossangiz yoki oldingi sahifaga qaytsangiz, siz uchun yangi savol paydo bo'ladi va siz bergan javob urinish deb hisoblanadi.</li>
+                            <li>Savollar har bir foydalanuvchi uchun tasodifiy ko'rsatiladi.</li>
+                            <li>Javobni yuborganingizda darhol baholaringiz aytiladi.</li>
+                        </ul>
+                    <p></p>
+                    <a href="{% url 'start-exam' course.id  %}" class="btn btn-info">Testni boshlash</a>
+                </div>  
+                <div class="card-footer">Omad</div>
+            </div>  
+        </div>  
+
+    </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock content %}
