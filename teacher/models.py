@@ -6,6 +6,7 @@ class Teacher(models.Model):
     profile_pic= models.ImageField(upload_to='profile_pic/Teacher/',null=False,blank=False)
     address = models.CharField(max_length=40)
     mobile = models.CharField(max_length=20,null=False)
+    email = models.EmailField(max_length=60,null=False,blank=False)
     status= models.BooleanField(default=False)
     salary=models.PositiveIntegerField(null=True)
 

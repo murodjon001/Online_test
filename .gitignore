@@ -6,3 +6,6 @@ __pycache__
 env
 db.sqlite3
 README.md
+teacher/migrations
+student/migrations
+quiz/migrations
